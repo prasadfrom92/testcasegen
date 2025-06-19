@@ -23,7 +23,7 @@ from typing import List
 load_dotenv()
 # Configure the Google API key, ensuring it's set in the environment
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets['GOOGLE_API_KEY'])
 
 # --- Pydantic Model Definitions (Unchanged) ---
 class UserStory(BaseModel):
