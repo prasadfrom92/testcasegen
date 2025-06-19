@@ -358,7 +358,7 @@ def main():
         placeholder="e.g., 'Customers need a way to log in using their Google account.'"
     )
 
-    if st.button("✨ Refine Story & Find Context", disabled=not raw_user_input):
+    if st.button("✨ Refine Story & Find Historical data", disabled=not raw_user_input):
         with st.spinner("AI is refining the new user story..."):
             st.session_state.enhanced_story = None
             try:
@@ -398,7 +398,7 @@ def main():
                     st.number_input( "📚 Number of Test Cases", min_value=0, max_value=20, value=10, step=1, key="num_test_cases_to_find")
                 with col2:
                     st.number_input("🐞 Number of Bugs", min_value=0, max_value=20, value=5, step=1, key="num_bugs_to_find")
-                if st.form_submit_button("🔄 Refresh Context"):
+                if st.form_submit_button("🔄 Refresh List of TCs & Bugs"):
                     find_and_update_context()
 
         # --- Curate Test Cases ---
