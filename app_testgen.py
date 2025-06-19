@@ -22,9 +22,7 @@ from typing import List
 # --- Environment Setup ---
 load_dotenv()
 # Configure the Google API key, ensuring it's set in the environment
-if "GOOGLE_API_KEY" not in os.environ:
-    st.error("🚨 GOOGLE_API_KEY not found in environment variables. Please set it up.")
-    st.stop()
+
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # --- Pydantic Model Definitions (Unchanged) ---
